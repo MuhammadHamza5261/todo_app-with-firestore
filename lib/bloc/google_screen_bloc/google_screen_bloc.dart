@@ -4,7 +4,7 @@ import 'package:todo_list_app/repository/google_repository/google_screen_repo.da
 import 'google_screen_event.dart';
 import 'google_screen_state.dart';
 
-class GoogleScreenBloc extends Bloc<GoogleAuthEvent,GoogleScreenState>{
+class GoogleScreenBloc extends Bloc<GoogleEvent,GoogleScreenState>{
 
 
   final googleAuthRespository = GoogleAuthRepository();
@@ -12,7 +12,7 @@ class GoogleScreenBloc extends Bloc<GoogleAuthEvent,GoogleScreenState>{
   GoogleScreenBloc(): super(GoogleInitialState())
   {
 
-    on<GoogleAuthEvent>((event,emit) async
+    on<GoogleEvent>((event,emit) async
         {
 
 

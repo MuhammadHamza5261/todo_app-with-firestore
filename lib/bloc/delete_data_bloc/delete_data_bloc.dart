@@ -4,13 +4,13 @@ import 'package:todo_list_app/bloc/delete_data_bloc/delete_data_event.dart';
 import 'package:todo_list_app/bloc/delete_data_bloc/delete_data_state.dart';
 import 'package:todo_list_app/repository/delete_task_repository/delete_task_repository.dart';
 
-class DeleteDataBloc extends Bloc<DeleteDataEvent,DeleteDataState>{
+class DeleteDataBloc extends Bloc<DeleteEvent,DeleteDataState>{
 
  final deleteTaskRepository = DeleteTaskRepository();
 
 
    DeleteDataBloc(): super(DeleteInitialState()){
-   on<DeleteDataEvent>((event,emit) async{
+   on<DeleteEvent>((event,emit) async{
 
      if(event is DeleteDataEvent) {
        emit(DeleteDataInProgressState());

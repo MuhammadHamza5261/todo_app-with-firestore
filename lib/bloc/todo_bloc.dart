@@ -5,7 +5,7 @@ import 'package:todo_list_app/bloc/todo_state.dart';
 import 'package:todo_list_app/repository/todo_repository.dart';
 
 
-class ToDoBloc extends Bloc<ToDoEvent,ToDoState>
+class ToDoBloc extends Bloc<Event,ToDoState>
 {
 
   final todoRespository = ToDoRepository();
@@ -13,7 +13,7 @@ class ToDoBloc extends Bloc<ToDoEvent,ToDoState>
 
   ToDoBloc(): super(ToDoInitial())
   {
-    on<ToDoEvent>((event,emit) async
+    on<Event>((event,emit) async
     {
 
       if(event is ToDoEvent)

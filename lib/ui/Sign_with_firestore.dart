@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_list_app/main.dart';
 import 'package:flutter/material.dart';
+import 'package:todo_list_app/ui/add_page.dart';
 
 import 'package:todo_list_app/ui/list_screen.dart';
 
@@ -228,7 +229,7 @@ class _ToDoScreenSTFState extends State<ToDoScreenSTF> {
         listener: (context,state){
           if(state is ToDoDataIsLoadedState){
             Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const  PractiseScreen()),
+                MaterialPageRoute(builder: (context) =>   AddPage()),
             );
           }
           else if(state is ToDoFailure){

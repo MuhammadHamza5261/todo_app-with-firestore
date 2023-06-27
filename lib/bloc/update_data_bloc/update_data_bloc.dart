@@ -8,13 +8,13 @@ import 'package:todo_list_app/repository/add_task_repository/add_task_repository
 import '../../models/response.dart';
 
 
-class UpdateScreenBloc extends Bloc<UpdateScreenEvent,UpdateDataState>{
+class UpdateScreenBloc extends Bloc<UpdateEvent,UpdateDataState>{
 
 
   final updateTaskRepository = UpdateTaskRepository();
 
   UpdateScreenBloc(): super(UpdateInitialState()) {
-    on<UpdateScreenEvent>((event, emit) async{
+    on<UpdateEvent>((event, emit) async{
 
       if(event is UpdateScreenEvent)
       {

@@ -34,8 +34,8 @@ class _EditPage extends State<EditPage> {
 @override
   void initState() {
     // TODO: implement initState
-     docUid =  widget.employee!.uid.toString();
-    _employee_name.text =  widget.employee!.employeename.toString();
+      docUid =  widget.employee!.uid.toString();
+    // _employee_name.text =  widget.employee!.employeename.toString();
     _employee_position.value = TextEditingValue(text: widget.employee!.position.toString());
     _employee_contact.value = TextEditingValue(text: widget.employee!.contactno.toString());
     

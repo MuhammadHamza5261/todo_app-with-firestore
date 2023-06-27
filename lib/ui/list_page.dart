@@ -112,8 +112,8 @@ class _ListPage extends State<ListPage> {
                                         MaterialPageRoute<dynamic>(
                                           builder: (BuildContext context) => EditPage(
                                             employee: Employee(
-                                                uid: e.id,
-                                                employeename: e["employee_name"],
+                                                 uid: e.id,
+                                                // employeename: e["employee_name"],
                                                 position: e["position"],
                                                 contactno: e["contact_no"]),
                                           ),

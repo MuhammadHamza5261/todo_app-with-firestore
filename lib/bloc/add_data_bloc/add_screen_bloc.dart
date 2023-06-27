@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '';
 import 'package:todo_list_app/repository/add_task_repository/add_task_repository.dart';
@@ -6,13 +5,13 @@ import '../../models/response.dart';
 import 'add_screen_event.dart';
 import 'add_screen_state.dart';
 
-class AddScreenBloc extends Bloc<AddScreenEvent,AddScreenState>{
+class AddScreenBloc extends Bloc<AddEvent,AddScreenState>{
 
 
   final addTaskRepository = AddTaskRepository();
 
   AddScreenBloc(): super(AddInitialState()) {
-    on<AddScreenEvent>((event, emit) async{
+    on<AddEvent>((event, emit) async{
 
       if(event is AddScreenEvent)
         {
