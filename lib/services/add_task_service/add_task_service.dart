@@ -29,8 +29,7 @@ class AddTaskService{
         );
       }
 
-      else
-      {
+      else {
         Fluttertoast.showToast(
           msg: 'Data is Saved on DataBase',
           toastLength: Toast.LENGTH_SHORT,

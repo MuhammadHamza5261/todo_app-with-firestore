@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 
 import 'package:todo_list_app/ui/list_screen.dart';
 
-import '../bloc/to_bloc.dart';
-import '../bloc/to_event.dart';
-import '../bloc/to_state.dart';
+import '../bloc/todo_bloc.dart';
+import '../bloc/todo_event.dart';
+import '../bloc/todo_state.dart';
 import '../first_screen.dart';
 import '../practise_Screen.dart';
 class ToDoScreen1 extends StatelessWidget {

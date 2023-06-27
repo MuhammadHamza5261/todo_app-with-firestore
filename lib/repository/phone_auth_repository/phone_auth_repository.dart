@@ -1,15 +1,17 @@
 
 
+import 'package:flutter/cupertino.dart';
+
 import '../../services/phone_auth_service/phone_auth_service.dart';
 
 class PhoneAuthRepository{
   PhoneAuthService phoneAuthService = PhoneAuthService();
 
 
-  Future<void> phoneAuthRepository({required String codeField}) async{
+  Future<bool> phoneAuthRepository({required String codeField,required BuildContext context}) async{
 
-      phoneAuthService.phoneAuth(codeField);
-
+     bool isOtpSent = await  phoneAuthService.phoneAuth(codeField,context);
+     return isOtpSent;
 
 
    }

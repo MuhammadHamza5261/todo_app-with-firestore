@@ -70,6 +70,36 @@ class FirebaseCrud {
         return response;
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   static Stream<QuerySnapshot> readEmployee() {
     CollectionReference notesItemCollection =
         _Collection;

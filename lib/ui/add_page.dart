@@ -152,6 +152,7 @@ class _AddPage extends State<AddPage> {
                 },
                 listener: (context,state){
                     if(state is AddDataIsLoadedState){
+
                      Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) =>  ListPage()),
               );

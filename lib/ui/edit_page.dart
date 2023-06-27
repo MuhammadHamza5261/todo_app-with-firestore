@@ -222,7 +222,7 @@ class _EditPage extends State<EditPage> {
                 listener: (context,state){
                   if(state is UpdateDataIsLoadedState){
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const ListPage()),
+                      MaterialPageRoute(builder: (context) =>  ListPage()),
                     );
                   }
 

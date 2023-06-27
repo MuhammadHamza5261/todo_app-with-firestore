@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:todo_list_app/bloc/to_event.dart';
-import 'package:todo_list_app/bloc/to_state.dart';
+import 'package:todo_list_app/bloc/todo_event.dart';
+import 'package:todo_list_app/bloc/todo_state.dart';
 import 'package:todo_list_app/repository/todo_repository.dart';
 
 

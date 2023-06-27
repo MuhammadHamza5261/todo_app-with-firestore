@@ -11,6 +11,13 @@ class PhoneInProgressState extends PhoneScreenState{}
 class PhoneDataIsLoadedState extends PhoneScreenState{}
 
 
+class OtpSent extends PhoneScreenState{}
+
+// class OtpSent extends PhoneScreenState {}
+//
+// class OtpVerified extends PhoneScreenState {}
+
+
 class PhoneIsFailure extends PhoneScreenState{
 
   final String errorMessage;
