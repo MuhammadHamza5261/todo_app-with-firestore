@@ -10,6 +10,8 @@ import 'add_page.dart';
 import 'edit_page.dart';
 
 class ListPage extends StatefulWidget {
+  const ListPage({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return _ListPage();
@@ -26,15 +28,6 @@ class _ListPage extends State<ListPage> {
     myBloc = Provider.of<MyBloc>(context, listen: false);
     myBloc.fetchData();
   }
-
-
-
-
-
-
-
-
-
 
 
 

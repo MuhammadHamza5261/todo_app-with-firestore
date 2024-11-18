@@ -1,5 +1,4 @@
 
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,7 +23,7 @@ class PhoneAuthService{
 
 
          await FirebaseAuth.instance.verifyPhoneNumber(
-        phoneNumber: codeField,
+         phoneNumber: codeField,
         verificationCompleted: (PhoneAuthCredential credential) {
 
           isPhone = true;

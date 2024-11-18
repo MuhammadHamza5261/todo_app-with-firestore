@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_list_app/ui/edit_page.dart';
-
 import '../bloc/add_data_bloc/add_screen_bloc.dart';
 import '../bloc/add_data_bloc/add_screen_event.dart';
 import '../bloc/add_data_bloc/add_screen_state.dart';
@@ -110,7 +108,7 @@ class _AddPage extends State<AddPage> {
             },
             child: state is AddInProgressState
                 ? const CircularProgressIndicator(color: Colors.white,)
-                : Text('Save', style: TextStyle(fontSize: 20),),
+                : const Text('Save', style: TextStyle(fontSize: 20),),
           ),
         ),
 
@@ -154,7 +152,7 @@ class _AddPage extends State<AddPage> {
                     if(state is AddDataIsLoadedState){
 
                      Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) =>  ListPage()),
+                    MaterialPageRoute(builder: (context) => const ListPage()),
               );
               }
                     else if(state is AddFailure){
@@ -166,7 +164,7 @@ class _AddPage extends State<AddPage> {
                             state.errorMessage,
                           ),
                         ),
-                      ) ;
+                      );
                     }
                 }
               )

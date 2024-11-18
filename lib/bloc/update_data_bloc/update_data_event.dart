@@ -7,7 +7,11 @@ class UpdateScreenEvent extends UpdateEvent{
   final String DocUid;
 
 
-  UpdateScreenEvent({required this.position, required this.contactno,required this.DocUid});
+  UpdateScreenEvent({
+    required this.position,
+    required this.contactno,
+    required this.DocUid,
+  });
 
 
 }

@@ -9,12 +9,16 @@ class AddTaskService{
 
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
+
   Future<Response?> addTask(String position, String contactNo) async {
 
     try{
+
       var response = await FirebaseCrud.addEmployee(
+
         position: position,
         contactno: contactNo,
+
       );
 
       if (response.code != 200) {
@@ -39,15 +43,12 @@ class AddTaskService{
           textColor: Colors.white,
         );
 
-
-
-
-
         return response;
+
       }
 
-
     }
+
     catch(e){
       throw Exception('Something went wrong');
     }

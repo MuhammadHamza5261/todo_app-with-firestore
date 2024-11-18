@@ -12,6 +12,7 @@ class UpdateTaskService{
     Future<Response?> updateTask(String position, String contactno,String docId) async{
 
     try{
+
       var response = await FirebaseCrud.updateEmployee(
         position: position,
         contactno: contactno,
@@ -52,17 +53,6 @@ class UpdateTaskService{
 
     }
 
-
-
-
-
-
   }
-
-
-
-
-
-
 
 }

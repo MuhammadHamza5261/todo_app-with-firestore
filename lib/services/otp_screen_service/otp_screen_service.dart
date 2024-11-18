@@ -8,20 +8,20 @@ import '../../ui/phone_0tp_screen.dart';
 class OtpScreenService{
 
 
-  FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
 
   // create a function
   Future<User?> otpService(String verify, String code) async {
     try{
 
-      PhoneAuthCredential credential =  await PhoneAuthProvider.credential(
+        PhoneAuthCredential credential =  await PhoneAuthProvider.credential(
         verificationId: verifycodeSTF.verify,
         smsCode: code,
+
       );
+
     UserCredential userCredential =  await  _firebaseAuth.signInWithCredential(credential);
-
-
 
     return userCredential.user;
 

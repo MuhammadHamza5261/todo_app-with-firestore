@@ -7,7 +7,7 @@ import 'add_screen_state.dart';
 
 class AddScreenBloc extends Bloc<AddEvent,AddScreenState>{
 
-
+  // use the repository
   final addTaskRepository = AddTaskRepository();
 
   AddScreenBloc(): super(AddInitialState()) {
@@ -20,7 +20,7 @@ class AddScreenBloc extends Bloc<AddEvent,AddScreenState>{
 
           try{
 
-            Response? userData = await addTaskRepository.addtaskRespository(
+            Response? userData = await  addTaskRepository.addtaskRespository(
               position: event.position,
               contactNo: event.contact,
 

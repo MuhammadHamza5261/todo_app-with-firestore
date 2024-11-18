@@ -3,12 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_list_app/bloc/otp_screen_bloc/otp_screen_bloc.dart';
 import 'package:todo_list_app/bloc/update_data_bloc/update_data_bloc.dart';
-import 'package:todo_list_app/practise_Screen.dart';
-import 'package:todo_list_app/ui/add_page.dart';
-import 'package:todo_list_app/ui/google_auth_screen.dart';
-import 'package:todo_list_app/ui/list_screen.dart';
-import 'package:todo_list_app/ui/otp_code_screen.dart';
-import 'package:todo_list_app/ui/phone_0tp_screen.dart';
 import 'dart:async';
 import 'bloc/add_data_bloc/add_screen_bloc.dart';
 import 'bloc/google_screen_bloc/google_screen_bloc.dart';
@@ -31,19 +25,11 @@ void main() async {
           BlocProvider<UpdateScreenBloc>(create: (context) => UpdateScreenBloc()),
           BlocProvider<MyBloc>(create: (context) => MyBloc()),
           BlocProvider<OtpScreenBloc>(create: (context) => OtpScreenBloc()),
-
-
         ],
         child: MyApp(),
       ));
 }
-// void main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   //add firebase in flutter project
-//   await Firebase.initializeApp();
-//   runApp(MyApp());
-//
-// }
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -69,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(const Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) =>  FirstScreen()),
+        MaterialPageRoute(builder: (context) => const  FirstScreen()),
       );
     });
   }
